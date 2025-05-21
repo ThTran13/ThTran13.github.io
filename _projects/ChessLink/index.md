@@ -23,25 +23,21 @@ main-image: /logIn.jpg
 
 ---
 
-## Overal Architecture
-{% include image-gallery.html images="OverallArchitecture.jpeg="400"%}
-<span style="font-size: 10px"> A depiction of the overall project communication flow</span>
+## Overall Architecture
+{% include image-gallery.html images="OverallArchitecture.jpeg" height="400" %}
+<span style="font-size: 10px">A depiction of the overall project communication flow</span>
 
 ## Frame Design
-{% include image-gallery.html images="Frame.jpeg" height="400"%}
-<span style="font-size: 10px"> App Design</span>
+{% include image-gallery.html images="Frame.jpeg" height="400" %}
+<span style="font-size: 10px">Frame Design</span>
 
 ## Circuit Design
-{% include image-gallery.html images="HallSensorCircuitSchematic.jpeg, PCB.jpeg" height="400"%}
-<span style="font-size: 10px"> Circuit Design and PCB Design</span>
+{% include image-gallery.html images="HallSensorCircuitSchematic.jpeg,PCB.jpeg" height="400" %}
+<span style="font-size: 10px">Circuit and PCB Design</span>
 
 ## Chess App
-{% include image-gallery.html images="startScreen.jpg, logIn.jpg, Menu.jpg, inGame.jpg" height="400"%}
-<span style="font-size: 10px"> App Design</span>
-
-### Embeed images
-{% include image-gallery.html images="project2.jpg" height="400" %} 
-place the images in project folder/images then update the file path.   
+{% include image-gallery.html images="startScreen.jpg,logIn.jpg,Menu.jpg,inGame.jpg" height="400" %}
+<span style="font-size: 10px">App Design</span>
 
 
 ## Demo
