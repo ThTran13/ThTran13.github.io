@@ -31,11 +31,9 @@ In addition to moisture sensing and watering, the system also includes a light c
 
 
 ## Plant O Lingo
-
-<br>
 {% include image-gallery.html images="Plant.jpg" height="400" %}
 
-
+<br>
 
 ## Arduino Code
 <pre><code class="language-cpp">
@@ -122,4 +120,7 @@ void loop() {
    }
   delay(86400000);
 }  
-</code></pre>
+
+<br>
+<br>
+<br>
