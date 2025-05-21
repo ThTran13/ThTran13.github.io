@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Chess Link
 description:  Chess Link is a smart physical chessboard that bridges the gap between traditional tactile play and modern online connectivity. Designed in response to the rise of remote gaming during the COVID-19 pandemic, it allows users to play chess physically while connected to friends or AI opponents via a companion Android app. The board uses 64 Hall effect sensors and RGB LEDs to track piece movements and guide gameplay with intuitive lighting. An Arduino Giga manages local hardware, while Cloudflare Workers and Durable Objects handle real-time game logic and matchmaking. With Bluetooth and WiFi connectivity, Chess Link delivers a seamless, screen-free chess experience.
 
 skills:
@@ -68,29 +68,16 @@ and the physical board.
 {% include youtube-video.html id="xJGokFGASY4" autoplay="false" %}
 
 <br>
+To demonstrate the capabilities of Chess Link, the board uses Hall effect sensors to detect the 
+presence and movement of chess pieces on a grid. Each sensor corresponds to a specific square, 
+allowing us to track piece positions in real time. When a piece is lifted and placed on another 
+square, the system detects the change in magnetic field and sends that data to an Arduino Giga 
+WiFi board, which communicates the move to an external app via WiFi. 
 
-The Arduino code can also be broken down into a few main parts of functionality. It consists of 
-the LEDs, LCD display, buttons, WiFi, and BLE communication, and the Hall Effect sensors for 
-move detection. In order to maintain varying requirements of these different systems, it is  
-important that no system utilizes significant portions of blocking time. If the move detection 
-prevented updates to the LCD, for example, then player messages or errors from the backend 
-might not be handled properly. To this end, the software was engineered as a large state machine. 
-Player inputs generate flags to be handled within the overall loop that the Arduino runs on. 
-
-The first step is to receive player and game IDs via Bluetooth from the accompanying app. To 
-accomplish this, a few characteristics are packaged into a Bluetooth service to be advertised. The 
-phone app updates the characteristics with the relevant data, allowing the Arduino Giga R1 to 
-begin its connection to WiFi and the backend. Once a stable websocket connection has been 
-established, the loop consists of checking that the connections are still stable, updating the LCD 
-and LEDs, handling incoming websocket messages, and detecting current voltage readings from 
-each of the Hall effect sensors. To allow for readable information to appear on the LCD without 
-quickly being overwritten by new incoming messages, a queue was implemented with the 
-message to be displayed, the time to display it for, and after how much time it will leave the 
-queue. The time-out feature is to prevent stale information from displaying on the board. For 
-example, if a move has been detected but before it has been displayed on the LCD, the player has 
-changed their move. In this case, the timeout will prevent the stale move data from being shown 
-to the user. Similar logic was implemented on the LEDs to manage players making moves and 
-displaying player-to-player messages, such as emojis. 
+Most importantly, the board introduces a novel communication feature: the ability to send 
+messages to each other as well as emojis, which display on the physical board without disrupting 
+gameplay. This makes the experience more immersive and personal than simply clicking on a 
+screen, and enables long-distance play that feels face-to-face.
 
 ## Adding a hozontal line
 ---
