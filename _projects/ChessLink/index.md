@@ -4,27 +4,19 @@ title:
 description:  Chess Link is a smart physical chessboard that bridges the gap between traditional tactile play and modern online connectivity. Designed in response to the rise of remote gaming during the COVID-19 pandemic, it allows users to play chess physically while connected to friends or AI opponents via a companion Android app. The board uses 64 Hall effect sensors and RGB LEDs to track piece movements and guide gameplay with intuitive lighting. An Arduino Giga manages local hardware, while Cloudflare Workers and Durable Objects handle real-time game logic and matchmaking. With Bluetooth and WiFi connectivity, Chess Link delivers a seamless, screen-free chess experience.
 
 skills:
-    - Arduino Giga R1
     - Hall effect sensor integration
     - LED control and multiplexing
     - LCD screen interfacing
     - Breadboarding & circuit debugging
-    - Soldering and wiring
-    - C++ (microcontroller programming)
-    - Flutter (mobile app development)
+    - C++
+    - Flutter 
     - Dart
-    - Python (logic, backend testing)
-    - Bluetooth Low Energy (BLE)
-    - WiFi module configuration
-    - WebSocket communication
+    - Python
     - RESTful API consumption
-    - Cloudflare Workers (serverless functions)
-    - Cloudflare Durable Objects
+    - Cloudflare Workers
     - SQL database management
-    - Secure authentication & token systems
     - HTTPS/WSS protocols
-    - KiCAD (schematic and PCB layout)
-    - Circuit testing and troubleshooting
+    - KiCAD
 
 main-image: /logIn.jpg
 ---
@@ -38,22 +30,19 @@ Use this for the header of each section
 Use this to have subsection if needed
 
 
-## Embedding images 
-### External images
-{% include image-gallery.html images="logIn.jpg, inGame,jpg, Menu.jpg, startScreen.jpg" height="400"%}
-<span style="font-size: 10px">"Starship Test Flight Mission" from https://www.flickr.com/photos/spacex/52821641477/</span>  
-You can put in multiple entries. All images will be at a fixed height in the same row. With smaller window, they will switch to columns.  
+## Chess App
+{% include image-gallery.html images="startScreen.jpg, logIn.jpg, Menu.jpg, inGame.jpg" height="400"%}
+<span style="font-size: 10px"> App Design</span>
 
 ### Embeed images
 {% include image-gallery.html images="project2.jpg" height="400" %} 
 place the images in project folder/images then update the file path.   
 
 
-## Embedding youtube video
+## Demo
 The second video has the autoplay on. copy and paste the 11-digit id found in the url link. <br>
-*Example* : https://www.youtube.com/watch?v={**MhVw-MHGv4s**}&ab_channel=engineerguy
-{% include youtube-video.html id="MhVw-MHGv4s" autoplay= "false"%}
-{% include youtube-video.html id="XGC31lmdS6s" autoplay = "true" %}
+*Link* : https://www.youtube.com/watch?v=xJGokFGASY4&ab_channel=ThuongNe
+{% include youtube-video.html id="xJGokFGASY4&ab" autoplay= "false"%}
 
 you can also set up custom size by specifying the width (the aspect ratio has been set to 16/9). The default size is 560 pixels x 315 pixels.  
 
