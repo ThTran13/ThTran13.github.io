@@ -28,7 +28,7 @@ main-image: /chesslink.jpg
 <span style="font-size: 10px">A depiction of the overall project communication flow</span>
 
 ## Frame Design
-{% include image-gallery.html images="Frame.jpeg" height="400" %}
+{% include image-gallery.html images="Frame.jpeg, FrameBoard.jpg" height="400" %}
 <span style="font-size: 10px">Frame Design</span>
 
 The mechanical part of the board consisted of the frame, the struts, the cover, and the squares. 
@@ -83,3 +83,11 @@ screen, and enables long-distance play that feels face-to-face.
 
 ## CHESSLINK
 {% include image-gallery.html images="board.jpeg" height="400" %}
+
+
+## Github Link
+https://github.com/ThTran13/ChessLink.git
+
+<br>
+<br>
+<br>

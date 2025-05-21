@@ -1,114 +1,119 @@
 ---
 layout: post
-title: Super Heavy Booster Catch (Demo Only)
-description:  (I have never been employed by / affiliated with SpaceX. This is for demo use only) 
-    Developing the Super Heavy booster catch project involves designing a robust launch tower with "chopstick" arms, advanced control systems for precise booster alignment, and integrating sophisticated software for real-time trajectory adjustments and structural engineering to handle immense forces.
+title: Plant O Lingo
+description:  
+    Plant O Lingo is a smart, modular plant care system developed using the iterative engineering design process. It monitors soil moisture using sensors, automatically waters the plant via a solenoid valve, and displays plant health status on an LCD. The structure is a scalable acrylic frame, integrating adjustable components, lighting, and communication systems to notify users of plant needs via text.
 skills: 
-  - Structural analysis
-  - Aerodynamic design
-  - Propulsion system integration
-  - Control Algorithem 
-  - Welding
-  - Metal forming
-  - Thermal simulation
+  - Sensor integration
+  - Circuit design
+  - Embedded systems (Arduino)
+  - CAD modeling (SolidWorks)
+  - 3D printing
+  - Acrylic prototyping
+  - Serial communication
+  - LCD interface
 
-main-image: /project2.jpg
+main-image: /Plant.jpg
 ---
 
 ---
-# Header 1 
-Used for the title (already generated automatically at the top)
-## Header 2  
-Use this for the header of each section
-### Header 3 
-Use this to have subsection if needed
 
+## Demo
+<br>
+{% include youtube-video.html id="QMqYJ8tsa5o" autoplay="false" %}
 
-## Embedding images 
-### External images
-{% include image-gallery.html images="https://live.staticflickr.com/65535/52821641477_d397e56bc4_k.jpg, https://live.staticflickr.com/65535/52822650673_f074b20d90_k.jpg" height="400"%}
-<span style="font-size: 10px">"Starship Test Flight Mission" from https://www.flickr.com/photos/spacex/52821641477/</span>  
-You can put in multiple entries. All images will be at a fixed height in the same row. With smaller window, they will switch to columns.  
+## Arduino Code
+<pre> ```cpp 
+#include <LiquidCrystal.h>         
 
-### Embeed images
-{% include image-gallery.html images="project2.jpg" height="400" %} 
-place the images in project folder/images then update the file path.   
+LiquidCrystal lcd(13, 12, 11, 10, 9, 8);  
+int SensorPin1 = A0;
+int SensorPin2 = A1;
+int sensorValue;
+int soilPower1 = 7;
+int soilPower2 = 6;
+int light = A2;
+int solenoid = A3;
 
+void setup() {                     
+  Serial.begin(9600);
+  Serial.print("Soil Moisture = ");
 
-## Embedding youtube video
-The second video has the autoplay on. copy and paste the 11-digit id found in the url link. <br>
-*Example* : https://www.youtube.com/watch?v={**MhVw-MHGv4s**}&ab_channel=engineerguy
-{% include youtube-video.html id="MhVw-MHGv4s" autoplay= "false"%}
-{% include youtube-video.html id="XGC31lmdS6s" autoplay = "true" %}
+  pinMode(solenoid, OUTPUT);
+  pinMode(light, OUTPUT);
+  
 
-you can also set up custom size by specifying the width (the aspect ratio has been set to 16/9). The default size is 560 pixels x 315 pixels.  
+  pinMode(soilPower1, OUTPUT);
+  pinMode(soilPower2, OUTPUT);
+  digitalWrite(soilPower1, LOW);
+  digitalWrite(soilPower2, LOW);  
+  
+  
+  lcd.begin(16, 2);                 
+  lcd.clear();                      
+}
 
-The width of the video below. Regardless of initial width, all the videos is responsive and will fit within the smaller screen.
-{% include youtube-video.html id="tGCdLEQzde0" autoplay = "false" width= "900px" %}  
+void loop() {
+   digitalWrite(light, LOW);
+   delay(2000);
+   digitalWrite(light, HIGH);
+   
+   for (int i = 0; i <= 10; i++) { 
+
+   digitalWrite(soilPower1, HIGH);
+   digitalWrite(soilPower2, HIGH);
+   delay(10);
+   digitalWrite(soilPower1, LOW);
+   digitalWrite(soilPower2, LOW);
+   sensorValue = sensorValue + analogRead(SensorPin1)+analogRead(SensorPin2); 
+   delay(1000); 
+   } 
+
+   sensorValue = sensorValue/20;
+   lcd.setCursor(0,0);
+   lcd.print(sensorValue);
+
+   if(sensorValue < 450){
+     lcd.clear();
+     lcd.setCursor(0,0);
+     lcd.print("plant needs");
+     lcd.setCursor(0,1);
+     lcd.print("more water");
+     delay(1000);
+     lcd.clear();
+
+     digitalWrite(solenoid, HIGH);
+     delay(4000);
+     digitalWrite(solenoid, LOW);
+   }
+   else if(sensorValue > 520){
+     lcd.clear();
+     lcd.setCursor(0,0);
+     lcd.print("plant needs");
+     lcd.setCursor(0,1);
+     lcd.print("less water");
+     delay(1000);
+     lcd.clear();
+   }
+   else{
+     lcd.clear();
+     lcd.setCursor(0,0);
+     lcd.print("plant has");
+     lcd.setCursor(0,1);
+     lcd.print("good water");
+     delay(1000);
+     lcd.clear();
+   }
+  delay(86400000);
+}  
+
+ ``` </pre>
+
+This Arduino-based smart plant monitoring system automates plant care by continuously checking soil moisture levels and providing responsive feedback to the user. It uses two analog moisture sensors connected to the Arduino to read the water content in the soil. By powering the sensors only during readings, the design prevents corrosion and conserves energy. Depending on the results, the system decides whether the plant needs more water, less water, or is in a healthy state. A solenoid valve is activated to water the plant if the moisture level is too low, delivering water through a controlled 4-second release. Meanwhile, a liquid crystal display (LCD) updates in real-time to inform the user of the plant’s condition.
+
+In addition to moisture sensing and watering, the system also includes a light connected to an output pin, which is toggled each cycle—possibly to simulate day/night cycles or support plant growth. The user interface is simple but effective, displaying direct messages such as “plant needs more water” or “plant has good water” to communicate the system’s assessment. The entire monitoring and watering cycle is designed to run once every 24 hours, minimizing power consumption while still ensuring the plant is regularly maintained. This approach provides a low-maintenance, user-friendly solution for plant care that merges basic electronics with functional automation.
 
 <br>
 
-## Adding a hozontal line
----
-
-## Starting a new line
-leave two spaces "  " at the end or enter <br>
-
-## Adding bold text
-this is how you input **bold text**
-
-## Adding italic text
-Italicized text is the *cat's meow*.
-
-## Adding ordered list
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
-## Adding unordered list
-- First item
-- Second item
-- Third item
-- Fourth item
-
-## Adding code block
-```ruby
-def hello_world
-  puts "Hello, World!"
-end
-```
-
-```python
-def start()
-  print("time to start!")
-```
-
-```javascript
-let x = 1;
-if (x === 1) {
-  let x = 2;
-  console.log(x);
-}
-console.log(x);
-
-```
-
-## Adding external links
-[Wikipedia](https://en.wikipedia.org)
-
-
-## Adding block quote
-> A blockquote would look great if you need to highlight something
-
-
-## Adding table 
-
-| Header 1 | Header 2 |
-|----------|----------|
-| Row 1, Col 1 | Row 1, Col 2 |
-| Row 2, Col 1 | Row 2, Col 2 |
-
-make sure to leave aline betwen the table and the header
-
-
+## Plant O Lingo
+{% include image-gallery.html images="plantOLingo.jpg" height="400" %}
