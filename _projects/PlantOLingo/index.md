@@ -31,7 +31,7 @@ In addition to moisture sensing and watering, the system also includes a light c
 
 
 ## Plant O Lingo
-{% include image-gallery.html images="Plant.jpg" height="400" %}
+{% include image-gallery.html images="Plant.jpg" height="600" %}
 
 <br>
 
