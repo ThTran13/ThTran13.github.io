@@ -25,7 +25,9 @@ main-image: /plantOLingo.jpg
 
 ## Arduino Code
 
-<pre> ```cpp 
+```html
+<pre><code class="language-cpp">
+
 #include <LiquidCrystal.h>         
 
 LiquidCrystal lcd(13, 12, 11, 10, 9, 8);  
@@ -108,9 +110,9 @@ void loop() {
    }
   delay(86400000);
 }  
+</code></pre>
 
- ``` </pre>
-
+<br>
 This Arduino-based smart plant monitoring system automates plant care by continuously checking soil moisture levels and providing responsive feedback to the user. It uses two analog moisture sensors connected to the Arduino to read the water content in the soil. By powering the sensors only during readings, the design prevents corrosion and conserves energy. Depending on the results, the system decides whether the plant needs more water, less water, or is in a healthy state. A solenoid valve is activated to water the plant if the moisture level is too low, delivering water through a controlled 4-second release. Meanwhile, a liquid crystal display (LCD) updates in real-time to inform the user of the plant’s condition.
 
 In addition to moisture sensing and watering, the system also includes a light connected to an output pin, which is toggled each cycle—possibly to simulate day/night cycles or support plant growth. The user interface is simple but effective, displaying direct messages such as “plant needs more water” or “plant has good water” to communicate the system’s assessment. The entire monitoring and watering cycle is designed to run once every 24 hours, minimizing power consumption while still ensuring the plant is regularly maintained. This approach provides a low-maintenance, user-friendly solution for plant care that merges basic electronics with functional automation.
