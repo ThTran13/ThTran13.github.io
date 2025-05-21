@@ -18,7 +18,7 @@ skills:
     - HTTPS/WSS protocols
     - KiCAD
 
-main-image: /logIn.jpg
+main-image: /board.jpeg
 ---
 
 ---
