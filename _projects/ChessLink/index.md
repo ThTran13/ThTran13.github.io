@@ -32,11 +32,11 @@ main-image: /logIn.jpg
 <span style="font-size: 10px">Frame Design</span>
 
 ## Circuit Design
-{% include image-gallery.html images="HallSensorCircuitSchematic.jpeg,PCB.jpeg" height="400" %}
+{% include image-gallery.html images="HallSensorCircuitSchematic.jpeg, PCB.jpeg" height="400" %}
 <span style="font-size: 10px">Circuit and PCB Design</span>
 
 ## Chess App
-{% include image-gallery.html images="startScreen.jpg,logIn.jpg,Menu.jpg,inGame.jpg" height="400" %}
+{% include image-gallery.html images="startScreen.jpg, logIn.jpg, Menu.jpg, inGame.jpg" height="400" %}
 <span style="font-size: 10px">App Design</span>
 
 
