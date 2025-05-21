@@ -24,7 +24,6 @@ main-image: /plantOLingo.jpg
 <br>
 
 ## Arduino Code
-<br>
 
 <pre><code class="language-cpp">
 
