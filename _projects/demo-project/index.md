@@ -18,9 +18,9 @@ main-image: /plantOLingo.jpg
 
 ---
 
-## Demo
+## Arduino Circuit
 <br>
-{% include youtube-video.html id="QMqYJ8tsa5o" autoplay="false" %}
+{% include image-gallery.html images="plantcircuit.jpg" height="400" %}
 <br>
 
 This Arduino-based smart plant monitoring system automates plant care by continuously checking soil moisture levels and providing responsive feedback to the user. It uses two analog moisture sensors connected to the Arduino to read the water content in the soil. By powering the sensors only during readings, the design prevents corrosion and conserves energy. Depending on the results, the system decides whether the plant needs more water, less water, or is in a healthy state. A solenoid valve is activated to water the plant if the moisture level is too low, delivering water through a controlled 4-second release. Meanwhile, a liquid crystal display (LCD) updates in real-time to inform the user of the plant’s condition.
