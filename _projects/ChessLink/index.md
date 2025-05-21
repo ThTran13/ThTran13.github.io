@@ -28,21 +28,26 @@ main-image: /chesslink.jpg
 <span style="font-size: 10px">A depiction of the overall project communication flow</span>
 
 ## Frame Design
+<br>
 {% include image-gallery.html images="Frame.jpeg, FrameBoard.jpg" height="400" %}
 <span style="font-size: 10px">Frame Design</span>
 
 The mechanical part of the board consisted of the frame, the struts, the cover, and the squares. 
 The board was fully constructed from birch plywood due to it being very cost-effective and sturdy. The squares themselves were 3D printed with an acrylic insert. By making them out of more common materials, it is easy to customize the board by changing different parts to better fit what the user wants.
+<br>
 
 ## Circuit Design
+<br>
 {% include image-gallery.html images="HallSensorCircuitSchematic.jpeg, PCB.jpeg" height="400" %}
 <span style="font-size: 10px">Circuit and PCB Design</span>
 
 The sensor system of the ChessLink board was designed using a switch matrix configuration, where Hall effect sensors were arranged in an 8×8 grid to detect piece positions. The VIN pins of the sensors were routed across rows, while the output signal pins ran down columns. Each sensor’s ground was controlled by 2N2222 transistors acting as row switches, which were driven by eight digital I/O pins from the Arduino Giga. Another eight analog inputs were used to read signals from each column. By sequentially activating one row at a time and reading the outputs from the columns, the board could detect magnetic piece placement. This method required a brief delay between row switching and signal reading, resulting in a full board scan time of approximately 200 milliseconds.
 
 To indicate moves, each square was outfitted with two LEDs mounted on parallel-connected strips. To reduce computational demand on the Arduino Giga, these LEDs were controlled by a separate Arduino Uno, which received RGB commands and position data via a serial interface. Power was supplied by a Samsung 21700 USB-C rechargeable battery, enabling portable use. Because the system included both 3.3V and higher-voltage components, two boost converters were used to step up the voltage for powering 5V LEDs and 9V Arduino boards, with an overall efficiency of approximately 90%. This integrated system enabled responsive, untethered gameplay with both visual feedback and accurate piece detection.
+<br>
 
 ## Chess App
+<br>
 {% include image-gallery.html images="startScreen.jpg, logIn.jpg, Menu.jpg, inGame.jpg" height="400" %}
 <span style="font-size: 10px">App Design</span>
 
@@ -62,6 +67,7 @@ connections for real-time gameplay updates and HTTP API requests for actions lik
 authentication, match creation, and statistics retrieval. The app listens for move updates and 
 game state changes through the WebSocket channel and reflects them both on the app’s interface 
 and the physical board.
+<br>
 
 ## Demo
 <br>
@@ -79,13 +85,16 @@ messages to each other as well as emojis, which display on the physical board wi
 gameplay. This makes the experience more immersive and personal than simply clicking on a 
 screen, and enables long-distance play that feels face-to-face.
 
-
+<br>
 
 ## CHESSLINK
+<br>
 {% include image-gallery.html images="board.jpeg" height="400" %}
 
+<br>
 
 ## Github Link
+<br>
 https://github.com/ThTran13/ChessLink.git
 
 <br>
