@@ -40,9 +40,7 @@ place the images in project folder/images then update the file path.
 
 
 ## Demo
-The second video has the autoplay on. copy and paste the 11-digit id found in the url link. <br>
-*Link* : https://www.youtube.com/watch?v=xJGokFGASY4&ab_channel=ThuongNe
-{% include youtube-video.html id="xJGokFGASY4&ab" autoplay= "false"%}
+{% include youtube-video.html id="xJGokFGASY4" autoplay="false" %}
 
 you can also set up custom size by specifying the width (the aspect ratio has been set to 16/9). The default size is 560 pixels x 315 pixels.  
 
