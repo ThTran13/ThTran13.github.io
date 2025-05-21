@@ -7,17 +7,16 @@
 
 # Main Page Setup
 
-title: John Doe's Portfolio # This is what shows up in the tab of the browser
+title: Thuong Tran's Portfolio # This is what shows up in the tab of the browser
 
 
 
 # Hero Section
-name: John Doe
-headline: headline message
+name: Thuong Tran
+headline: Computer Engineer 
 description: >- # dont remove this line. this will ignore all new lines until the next section
-  Write an awesome intro and discuss your highlights and qualification. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I’m a Northeastern University CE student, class of 2025, with experience in IT, networking, and app design. 
+  I’m passionate about hands-on experience in hardware digital design and programming.
 
 # Place your profile image in /assets/images/profile-image/folder and edit the file name
 profile_image: ./assets/images/profile-image/avatar.jpeg
@@ -25,14 +24,14 @@ profile_image: ./assets/images/profile-image/avatar.jpeg
 
 # Link your resume
 # You can place your resume in assets/resume/{resume file.pdf} or add external link such as pdf saved in google drive 
-resume-url: https://drive.google.com/file/d/13Z3duVzh-gguPU5r03oJVEE6rV9rd3DS/view?usp=sharing
+resume-url: https://docs.google.com/document/d/15U_JDylvfB9_lQ8eQty6BOKedWIX-vbMrWLtz_dM6GI/edit?usp=sharing
 
 
 # Set up external links - this will show up as small icons next to your name.
 
 external-links:    # input only your own url slug. The icons with missing entries will not appear.
-  linkedin: test    # https://www.linkedin.com/in/{your url slug} 
-  github: leea12    # https://github.com/{your url slug} 
+  linkedin: test    # https://www.linkedin.com/in/thuong-tran-988881252/
+  github: ThTran13    # https://github.com/ThTran13
   stackoverflow: test      # https://stackoverflow.com/users/{your url slug}
   medium:            # https://medium.com/@{your url slug} 
   x-twitter:   # https://x.com/{your url slug} 
@@ -47,44 +46,52 @@ external-links:    # input only your own url slug. The icons with missing entrie
 skills:
   - category: 3D Modeling
     tools:
-    - Onshape
-    - Solidworks
-    - Creo
-    - Fusion 360 (Autodesk)
-    - Blender (for complex shapes or animations)
-    - Siemens NX
-    - Inventor (Autodesk)
-    - CATIA (Dassault Systèmes)
-  - category: Prototyping
+      - SolidWorks
+      - AutoCAD
+  - category: Prototyping & Embedded Systems
     tools:
-    - SLA
-    - CNC
-    - FDM
-    - SLS
-    - DMLS
-    - PolyJet Printing
-    - Vacuum Casting
-    - Laser Cutting
-    - Water Jet Cutting
-    - Arduino / Raspberry Pi
-    - Breadboarding for circuit testing
-  - category: Design Standards / Practices
+      - Breadboarding for circuit testing
+      - Arduino (Giga R1)
+      - Soldering
+      - Sensors (Hall Effect, moisture, light, ultrasonic)
+      - LCD Display Integration
+      - LED Matrix & Control
+      - Bluetooth Low Energy (BLE)
+      - WiFi Module Configuration
+      - WebSocket Client (Arduino side)
+  - category: Programming & Scripting
     tools:
-    - GD&T ASME Y14
-    - ISO fits and tolerances
-    - PLM (PTC Windchill / Arena)   
-  - category: PCB Design
+      - Python (Tkinter GUI, logic algorithms)
+      - C++
+      - MATLAB
+      - PowerShell (scripting, system tasks)
+      - Dart (Flutter development)
+      - RESTful API Consumption
+      - WebSocket Protocol
+  - category: PCB Design & Logic Design
     tools:
-    - Altium Designer
-    - Altium
-    - Eagle 
-    - KiCad
-  - category: Problem Solving / Risk Management
+      - Quartus Lite (DE1-SoC)
+      - PWM control
+      - Logic circuit design
+      - KiCad (schematic & layout)
+      - Verilog (FPGA programming)
+  - category: IT & Networking
     tools:
-    - Root Cause Analysis (e.g., 5 Whys, Fishbone Diagram)
-    - DFMEA / PFMEA 
-    - Six Sigma methodologies
-    - Shain Red-X
+      - Windows OS
+      - macOS
+      - LAN Network Monitoring
+      - Software Installation & Troubleshooting
+      - Cloudflare Workers (serverless functions)
+      - Durable Objects (persistent backend state)
+      - SQL Database Management
+      - HTTPS/WSS Protocol Security
+  - category: Soft Skills & Languages
+    tools:
+      - Fluent English
+      - Native Vietnamese
+      - Intermediate Mandarin
+      - Technical Documentation
+      - Presentation & Demo Skills
 
 
 # Contact Form Setup. Setup an account and copy over the key. When someone fills out the form, it will be received in your email.
