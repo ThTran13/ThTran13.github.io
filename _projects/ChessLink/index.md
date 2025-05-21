@@ -22,13 +22,18 @@ main-image: /logIn.jpg
 ---
 
 ---
-# Header 1 
-Used for the title (already generated automatically at the top)
-## Header 2  
-Use this for the header of each section
-### Header 3 
-Use this to have subsection if needed
 
+## Overal Architecture
+{% include image-gallery.html images="OverallArchitecture.jpeg="400"%}
+<span style="font-size: 10px"> A depiction of the overall project communication flow</span>
+
+## Frame Design
+{% include image-gallery.html images="Frame.jpeg" height="400"%}
+<span style="font-size: 10px"> App Design</span>
+
+## Circuit Design
+{% include image-gallery.html images="HallSensorCircuitSchematic.jpeg, PCB.jpeg" height="400"%}
+<span style="font-size: 10px"> Circuit Design and PCB Design</span>
 
 ## Chess App
 {% include image-gallery.html images="startScreen.jpg, logIn.jpg, Menu.jpg, inGame.jpg" height="400"%}
