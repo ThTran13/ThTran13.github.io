@@ -13,7 +13,7 @@ skills:
   - Serial communication
   - LCD interface
 
-main-image: /Plant.jpg
+main-image: /plantOLingo.jpg
 ---
 
 ---
@@ -21,8 +21,10 @@ main-image: /Plant.jpg
 ## Demo
 <br>
 {% include youtube-video.html id="QMqYJ8tsa5o" autoplay="false" %}
+<br>
 
 ## Arduino Code
+
 <pre> ```cpp 
 #include <LiquidCrystal.h>         
 
@@ -116,4 +118,4 @@ In addition to moisture sensing and watering, the system also includes a light c
 <br>
 
 ## Plant O Lingo
-{% include image-gallery.html images="plantOLingo.jpg" height="400" %}
+{% include image-gallery.html images="Plant.jpg" height="400" %}
